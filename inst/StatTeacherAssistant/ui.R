@@ -46,13 +46,6 @@ navbarPage("StatTeacherAssistant",
     #tags$head(tags$style(HTML(".modal-footer {display: none}"))),
 
 
-    # suppress all warnings in console
-    # tags$style(type = "text/css",
-    #   ".shiny-output-error {visibility: hidden;}",
-    #   ".shiny-output-error:before {visibility: hidden;}"
-    # ),
-
-
     # remove arrows from all numeric inputs
     tags$style(HTML("
       input[type=number]::-webkit-inner-spin-button,
@@ -3152,17 +3145,14 @@ navbarPage("StatTeacherAssistant",
 
   tabPanel("About", icon = icon("info-circle"),
 
-    column(4,
-      h4("The information below will be updated after the completion of the
-        blind review process for the associated article."
-      ),
-
-      linebreaks(1),
+    column(5,
 
       # information about the developers
       h4("Developers"),
 
-      p("This tool was developed by Anonymous."),
+      p("This tool was developed by Chris Casement and Laura McSweeney, faculty
+        in the Department of Mathematics at Fairfield University."
+      ),
 
       linebreaks(1),
 
@@ -3183,19 +3173,48 @@ navbarPage("StatTeacherAssistant",
       # contact info
       h4("Contact"),
 
-      p("Email: Anonymous"),
+      p("Email: casementc@gmail.com"),
+
+      linebreaks(1),
+
+
+      # article info
+      h4("Information for Citing the App"),
+
+      p("Casement, C. J., & McSweeney, L. A. (2023). StatTeacherAssistant: An
+        Application for Creating, Adjusting, and Checking the Suitability of
+        Data Sets for Courses that Incorporate Introductory Statistical Methods.
+        Journal of Statistics and Data Science Education, 32(1), 36–46.
+        https://doi.org/10.1080/26939169.2023.2190009"
+      ),
 
       linebreaks(1),
 
 
       # copyright statement
-      p("Copyright \uA9 2020-2022 by Anonymous."),
+      p("Copyright \uA9 2020-2025 by Christopher J. Casement and Laura A.
+        McSweeney."
+      ),
 
       p("The license statement can be found",
         a("here.", href = "https://choosealicense.com/licenses/mit/",
           target = "_blank"
         )
       )
+    ),
+
+
+    column(1, ""),
+
+
+    column(4,
+
+      br(),
+      br(),
+      br(),
+      br(),
+
+      img(src = "StatTeacherAssistant_Sticker_Image.png", height = "300px")
     )
   )
 )
